@@ -41,7 +41,10 @@
         "recordsecurityfilter": "Record Security Filter",
         "zipFileName": "Migration Zip File Name",
         "zipSpecFileName": "Migration Specification File Name",
-        "securitySaved": "Security Saved"
+        "securitySaved": "Security Saved",
+        "zipFileNameonserver": "Migration Zip File on Server",
+        "specFileNameOnServer": "Migration Specification File on Server",
+        "zipSpecZipFileName": "Migration Specification Zip File Name"
     },
     "charttypes": {
         "pie": "Pie",
@@ -118,7 +121,20 @@
         "source": "Source",
         "typecode": "Type Code",
         "folder": "Folder",
-        "columneditable": "This column is editable!"
+        "columneditable": "This column is editable!",
+        "history": "History",
+        "date": "Date",
+        "entryDate": "EntryDate",
+        "historyId": "HistoryID",
+        "extSess": "ExtSess",
+        "who": "Who",
+        "internalrecordid": "Internal Record Id",
+        "attribute": "Attribute",
+        "oldValue": "Old Value",
+        "newValue": "New Value",
+        "staging": "Staging",
+        "production": "Production",
+        "prestaging": "PRESTAGING"
     },
     "common": {
         "title": "Channel Readiness",
@@ -164,6 +180,7 @@
             "manageimporttemplate": "Manage Import Template",
             "exporttemplates": "Export Templates",
             "manageexporttemplate": "Manage Export Template",
+            "managesyndicatetemplate": "Manage Syndication Template",
             "linkrelations": "Link Relations",
             "managelinkrelation": "Manage Link Relation",
             "managetabs": "Manage Tabs",
@@ -201,9 +218,9 @@
             "modelhierarchy": "Model - Hierarchy",
             "modeltaxonomy": "Model - Taxonomy",
             "modelcodeset": "Model - Code Set",
-            "templateexport": "Export Template",
+            "templateexport": "Export Templates",
             "templatepublication": "Publication Template",
-            "templatesyndication": "Syndication Template",
+            "templatesyndication": "Syndication Templates",
             "templateexchange": "Exchange Template",
             "codes": "Codes - {{title}}",
             "codesettype": "Code Sets - {{title}}",
@@ -219,7 +236,8 @@
             "tabdesc": "Tab Description",
             "groupname": "Group Name",
             "groupdesc": "Group Description",
-            "exporttemplateeditor": "Export Template Editor"
+            "exporttemplateeditor": "Export Template Editor",
+            "syndicatetemplateeditor": "Syndication Template Editor"
         },
         "toolbar": {
             "all": "All",
@@ -259,12 +277,14 @@
             "deselectall": "Deselect All",
             "logout": "Logout",
             "error": "Error",
+            "noOfItemsInError": "Number of items in error",
             "image": "Image",
             "message": "Message",
             "status": "Status",
             "record": "record",
             "records": "records",
             "validate": "Validate",
+            "deselect": "Deselect",
             "lastjob": "Last Job",
             "clear": "Clear",
             "copy": "Copy",
@@ -293,6 +313,7 @@
             "editattribute": "Edit Attribute",
             "select": "Select",
             "addnewrow": "Add New Row",
+            "addrow": "Add Row",
             "downrow": "Down Row",
             "uprow": "Up Row",
             "translate": "Translate",
@@ -314,14 +335,24 @@
             "events": "Events",
             "download": "Download",
             "upload": "Upload",
- 			"startjob": "Start Job",
+            "toggle": "Toggle",
+            "startjob": "Start Job",
             "move": "Move",
             "moveTemplate": "Move Template",
             "addtemplate": "Add Template",
             "edittemplate": "Edit Template",
             "deletetemplate": "Delete Template",
             "importtemplate": "Import Template",
-            "exporttemplate": "Export Template"
+            "exporttemplate": "Export Template",
+            "importMappings": "Import",
+            "exportMappings": "Export",
+            "importName": "Import Names",
+            "tillDate": "Till Date",
+            "avgrestime": "Avg Response Time",
+            "sec": "sec",
+            "stopImpersonate" :"Stop Impersonate",
+            "impersonating" : "Impersonating",
+            "showDefault": "Show"
         },
         "button": {
             "yes": "Yes",
@@ -332,6 +363,7 @@
             "confirm": "Confirm",
             "close": "Close",
             "apply": "Apply",
+            "applynupdate": "Apply and Update",
             "next": "Next",
             "back": "Back",
             "clear": "Clear",
@@ -346,37 +378,47 @@
             "remove": "Remove",
             "migrate": "Migrate",
             "reset": "Reset",
-            "edit":"Edit",
+            "resetFilters": "Reset Filters",
+            "calculate": "Calculate",
+            "edit": "Edit",
             "saving": "Saving",
             "saveContinue": "Save And Continue",
-            "continue" : "Continue",
+            "continue": "Continue",
             "finish": "Finish",
-            "savefinish": "Save And Finish"
+            "savefinish": "Save And Finish",
+            "clearaliases": "Clear Aliases",
+            "autofillaliases": "Autofill Aliases"
         },
         "message": {
             "underconstruction": "Under Construction",
             "deletemessage": "Do you want to delete selected {{screenname}}(s)?",
-            "deleteSelectedRecords": "Do you want to delete {{count}} record(s)?",
             "dependencies": "Dependencies are :",
             "logout": "Do you want to Logout ?",
             "selectrecordstodelete": "Please select record(s) to delete.",
+            "deleteSelectedRecords": "Do you want to delete {{count}} record(s)?",
             "doyouwantto": "Do you want to {{title}} ?",
             "useselectedtemplateasexport": "Use selected template as the export template.",
             "useselectedpreferenceasexport": "Use selected preference as the export template.",
             "outputallglobalattr": "Output all the global attributes.",
-            "uniquearray":"Array must have unique items",
-            "changelanguage":"Do you want to change the language, this will reset the entire workspace?",
-            "unassignedlanguage": "Selected language is not assigned to current user, So changing to default language"
+            "uniquearray": "Array must have unique items",
+            "changelanguage": "Do you want to change the language, this will reset the entire workspace?",
+            "unassignedlanguage": "Selected language is not assigned to current user, So changing to default language",
+            "doyouwanttocontinue": "Do you want to continue?",
+            "norecordfound" : "No record found."
         },
         "alerts": {
+            "records": " records",
+            "record": " record",
             "loading": "Loading...",
             "uploading": "Uploading...",
             "completed": "Completed",
             "deleting": "Deleting...",
             "copying": "Copying...",
-            "sequencesaving": "Sequence saving..."  ,
+            "sequencesaving": "Sequence saving...",
             "sessionexpired": "Session has expired. Please log in again.",
             "savedsuccessfully": "Saved Successfully",
+            "savechannelerr": "Channel name must not be empty, and the channel name cannot be the same as an existing channel.",
+            "savecodeseterr": "The English code set name field must have a value in order to save the code set.",
             "recordsavedsuccess": "Record Saved Successfully",
             "savesuccess": "{{screenname}} saved successfully.",
             "partialsuccess": "{{screenname}} saved partially",
@@ -395,14 +437,15 @@
             "selectrecordstocompare": "Please select at least two records to compare.",
             "selectitemtoexport": "Please select an item to export.",
             "selectuser": "Please select a user.",
-            "passwordupdatesuccess":"Successfully updated password",
-            "passwordupdatefail":"Error: Failed to update password",
+            "passwordupdatesuccess": "Successfully updated password",
+            "passwordupdatefail": "Error: Failed to update password",
             "preferencedeletedsuccess": "Preference deleted successfully.",
-            "channeldeletesuccess":"Channel has been deleted successfully",
-            "recordsecurityfilterdeletesuccess":"Record Security Filter Deleted Successfully",
+            "preferencedeletecapability": "You don't have the capability assigned to delete preferences.",
+            "channeldeletesuccess": "Channel has been deleted successfully",
+            "recordsecurityfilterdeletesuccess": "Record Security Filter Deleted Successfully",
             "sequencecannotbechanges": "Sequence can not be changed",
             "sequencesavesuccess": "Sequence Saved Successfully.",
-            "layoutsavesuccess":"Layout saved successfully",
+            "layoutsavesuccess": "Layout saved successfully",
             "preferencesavesuccess": "Preference {{name}} saved successfully.",
             "preferencecreatesuccess": "Preference {{name}} created successfully.",
             "recordsvalidated": "Records have been validated.",
@@ -410,7 +453,7 @@
             "rollbacksuccess": "Rollback successful.",
             "rollbackerror": "Error rollbacking item.",
             "recordslockedinworkflow": "All selected records are locked in workflow and will not be submitted.",
-            "workingstartingpointsnotpresent": "Workflow starting points are not present",
+            "workingstartingpointsnotpresent": "Workflow configuration not defined!",
             "updatevariantssuccess": "Variants of {{length}} Items Are Updated Successfully.",
             "jobstartedtoupdatevariants": "Job is started to update all Variants.",
             "underconstruction": "Under Construction",
@@ -463,8 +506,14 @@
             "LRparentPrefGroup": "Parent preference group is required",
             "attributewriterights": "User doesn't have edit rights for ",
             "attributenotfound": "Attribute not found.",
-            "deLink":"Do you want to remove the selected link(s) ?",
-            "deleteRecord":"Do you want to delete selected record(s) ?"
+            "deLink": "Do you want to remove the selected link(s) ?",
+            "deleteRecord": "Do you want to delete selected record(s) ?",
+            "displayNameExist": "Display name '{{screenname}}' existed!",
+            "displayNameCannotBlank": "Display name can't be empty!",
+            "recordsDeleteSuccess": "Selected record(s) have been deleted",
+            "jobRanWith": "job ran with",
+            "deleteTitle": "Delete Record(s)",
+			"someErrorOccured":"Some Error Occured.. Please contact Admin"
         },
         "tooltip": {
             "addrecord": "Add Record",
@@ -481,17 +530,42 @@
             "workflowdetails": "Send To Workflow",
             "showallattr": "Show all attribute",
             "showdiffattr": "Show only different attribute",
-            "showdingrid":"Show In Grid",
-            "showdintable":"Show In Table",
+            "showdingrid": "Show In Grid",
+            "showdintable": "Show In Table",
             "clickformore": "Click to view more",
             "displayAttr": "Click to view Display Attributes",
             "joinCondition": "Click to view other join condition",
             "addLinkRel": "Click to add new Link Relation",
             "logfile": "Download Log File",
+            "outputLogFile": "Download Output File",
             "errorfile": "Download Error File",
             "outputfile": "Download Output File",
             "hierarchy": "Hierarchy / Taxonomy",
-            "more": "More..."
+            "more": "More...",
+            "deletegroup": "Delete Group",
+            "select10Records": "Select 10 records",
+            "channelInformation": "Channel Information",
+            "saveReorderSequence": "Save Reorder Sequence",
+            "deprecatedOpenLinkTableInWindow": "Deprecated - Open Link table in Window",
+            "editInNewWindow": "Edit in New Window",
+            "openInNewTab": "Open in New Tab",
+            "deprecatedOpenInNewWindow": "Deprecated - Open in New Window",
+            "addNewLinkRelation": "Click to add a new link relation",
+            "setTabGroupFormat": "set tab-group format",
+            "generateItemVariants": "Generate Item Variants",
+            "autoClassify": "Auto Classify",
+            "applyChangeAndUpdateModel": "apply change and update model",
+            "saveHeight": "Save Height",
+            "downloadAssets": "DownLoad Assets",
+            "downloadLogFile": "Download Log File",
+            "downloadErrorFile": "Download Error File",
+            "downloadOutputFile": "Download Output File",
+			"fillOutReqdField":"Please fill out this field.",
+			"dblClkOrDragToAdd":"Double-click or drag to add",
+            "and" : "And",
+            "yes": "Yes",
+            "no": "No",
+            "downloadImage": "Download Image"
         },
         "fields": {
             "name": "Name",
@@ -536,18 +610,91 @@
             "cardview": "Card view",
             "galleryview": "Gallery view"
         },
-        "linkbox":{
-            "availableattributes":"Available Attributes",
-            "selectedattributes":"Selected Attributes"
+        "linkbox": {
+            "availableattributes": "Available Attributes",
+            "selectedattributes": "Selected Attributes"
         },
-        "notavailable":"NOT AVAILABLE",
-        "titleRemoveLink":"Remove Link",
-        "titleDeleteRecord":"Delete Record",
+        "notavailable": "NOT AVAILABLE",
+        "titleRemoveLink": "Remove Link",
+        "titleDeleteRecord": "Delete Record",
         "fileProcessError": "The selected file has changed since it was selected. You must go back, re-select it, then start over."
+    },
+    "commonAlerts": {
+        "info": {
+            "enterDefLangText": "Please enter default language text.",
+            "enterCode": "Please Enter code.",
+            "enterDesc": "Please Enter description.",
+            "detailsSavedSuccessfully": "Details Save Successfully",
+            "detailsDeleteSuccessfully": "Details Delete Successfully",
+            "detailsReorderSuccessfully": "Details Reorder Successfully",
+            "discardedUnsavedChanges": "All unsaved changes are discarded",
+            "saving": "Saving...",
+            "deleting": "Deleting...",
+            "noImageLinked": "No image linked",
+            "selectItem": "Please Select Item",
+            "editingMoreThanOneRecord": "Information: Editing more than one record.",
+            "resp": "resp : {{resp}}",
+            "selectAttr": "Select Attribute",
+            "removingAssociation": "Removing association",
+            "itemNoLongerInRepo": "This ItemId({{itemId}}) is no longer in {{repo}} Repository",
+            "addColumnToGrid": "Please Add ({{name}}) Column To Grid"
+        },
+        "error": {
+            "invalidForm": "Error: form is invalid",
+            "errMsgForLang": " {{errmsg}} for {{lang}} Language",
+            "invalidUrl": "URL not found.",
+            "enterName": "Please enter name",
+            "selectOnlyOneGrp": "Please select only one Group.",
+            "selectOnlyOneUsr": "Please select only one User.",
+            "prbStoringHeight": "Problem in store height",
+            "modelUpdateFailed": "Failed to update model with ID {{modelId}}",
+            "noTaxonomyHierarchyCreated": "No taxonomy/hierarchy node is created.",
+            "prbInReorder": "Problem In Reorder",
+            "detailsNotDel": "Details Not Deleted",
+            "setUiCapability": "Please Set UI Capability",
+            "errMsg": "Error : {{errmsg}}",
+            "recordNotSaved": "Record not saved",
+            "apiNotWorking": "API Not working",
+            "attrReqdToAddLinks": "The following attributes are required before attempting to add links :{{linkData}}"
+        },
+        "success": {
+            "saving": "Saving...",
+            "seqSaving": "Sequence Saving..",
+            "addedSuccessfully": "Added Successfully",
+            "saveSuccessfully": "Save Successfully",
+            "deleted": "Deleted",
+            "updateVariantsSuccess": "Update Variants Successfully",
+            "modelUpdateSuccess": "Successfully updated model with ID {{modelId}}",
+            "linkRelationHeightSavedSuccess": "Link relation height save successfully",
+            "recordAddedToSavedSet": " Record added to Saved set {{linkedSavedSet}}",
+            "recordAddedToEvent": " Record added to Event{{linkedEvent}}",
+            "savedSetPromotedSuccess": "Saved Set Promoted Successfully",
+            "imageVariantRegenerationJobSubmittedSuccess": "Image variant regeneration job submitted successfully.",
+            "imageReportJobSubmittedSuccess": "Image report job submitted successfully.",
+            "imageDeletionJobSubmittedSuccess": "Image deletion job submitted successfully.",
+            "prefSavedSuccess": "Preference {{name}} is saved successfully.",
+            "itemsAddedToSavedSet": "{{itemcount}} {{item}} added to {{savedSetName}}",
+            "itemsAssociatedWithSavedSet": " {{recordSelectionsCount}} already associated with '{{savedSetName}}' Saved Set.",
+            "theseItemsAre": "These items are",
+            "thisItemIs": "This item is"
+        },
+        "warn": {
+            "selectOnePropToEdit": "Select 1 Property To Edit",
+            "propAlreadyUsedByAnotherProp": "The property name is already being used by another property",
+            "selectParentNode": "Please select parent Node",
+            "selectSingleRow": "Select Single Row",
+            "repoAllItemMoveNotAllowed": "Repository All Item Move Not Allowed",
+            "allRecordMoveNotAllowed": "All record move not allowed",
+            "selectItem": "Please select item",
+            "errMsg": "Error : {{errmsg}}",
+            "somethingWentWrong": "Something went to wrong : {{message}}",
+            "unauthorizedModifyingOrDeletingSavedSet": "Error processing request: Error modifying or deleting saved set {{savedSetName}}.Only the system administrator or the owner of a saved set may modify or delete the saved set.",
+            "failedCreatingPropRepoRecord": "Unable to create the Properties Repository Record."
+        }
     },
     "about": {
         "about": "about",
-        "aboutdesc": "EnterWorks is a market leader in master data solutions for acquiring, managing and transforming a company’s product information into persuasive and personalized content for marketing, sales, digital commerce and new market opportunities.",
+        "aboutdesc": "Precisely EnterWorks is a market leader in master data solutions for acquiring, managing and transforming a company’s product information into persuasive and personalized content for marketing, sales, digital commerce and new market opportunities.",
         "singleviewcontent": "Single View of Content",
         "coveratedata": "Converge product data to dynamically link supply & demand chains.",
         "diffexperience": "Differentiated Experiences",
@@ -558,6 +705,7 @@
     },
     "dashboard": {
         "config": "Configuration",
+        "configure": "Configure",
         "options": "Options",
         "widgets": {
             "shortcuts": "Shortcuts",
@@ -579,7 +727,27 @@
             "repositories": "Repositories",
             "imagereport": "Image Report",
             "countreport": "Count Report",
-            "systemhealth": "System Health"
+            "systemhealth": "System Health",
+            "status": "Status",
+            "lastmodifyinterval": "Last Modified Interval",
+            "service": "Service",
+            "message": "Message",
+            "microservice": "Microservice",
+            "lastHeartBeatOn": "Last heartbeat on "
+
+        },
+        "autoclassifywidget": {
+            "created": "Created",
+            "lastTrained": "Last trained",
+            "accuracy": "Accuracy",
+            "attributesFor": "Attributes for",
+            "f1": "F1",
+            "good": "Good",
+            "medium": "Medium",
+            "poor": "Poor",
+            "precision": "Precision",
+            "recall": "Recall",
+            "selectModelMsg": "No model selected, select a model to see model details"
         },
         "fields": {
             "title": "Title",
@@ -596,7 +764,16 @@
             "url": "URL",
             "legendposition": "Graph Legend Position",
             "openinpopup": "Open in Pop-up",
-            "widgetGroup": "Widget Group"
+            "widgetGroup": "Widget Group",
+            "namechange": "Name Change",
+            "suffix": "Suffix",
+            "prefix": "Prefix",
+            "none": "None",
+            "universaluniqueid": "Universal Unique Id",
+            "userid": "User Id",
+            "securitycontextid": "Security Context Id",
+            "timestamp": "Timestamp",
+            "filerenamingoptions": "File renaming options"
         },
         "toolbar": {
             "selectprofile": "Select Profile",
@@ -610,7 +787,10 @@
             "reponotdefined": "Shortcuts Repository Not Defined"
         },
         "alerts": {
-            "defaultnotset": "Default home configuration is not set"
+            "defaultnotset": "Default home configuration is not set",
+            "deletemodaltitle": "Delete Widget",
+            "deletemodalerror": "Are you sure you want to delete selected widget ?",
+            "errordeletingwidget": "Error deleting widget."
         }
     },
     "repolist": {
@@ -624,7 +804,9 @@
             "entername": "Enter Name",
             "enterdescription": "Enter Description",
             "node": "Node",
-            "pendingrequest": "Pending Request"
+            "pendingrequest": "Pending Request",
+            "savedsetnameis": "Saved Set name is",
+            "required": "required"
         },
         "savedsearch": {
             "nofilters": "No Filters",
@@ -695,7 +877,7 @@
             "uniquebusinesskeys": "Unique Business Keys (If defined in configuration)",
             "columndatatype": "Column Data Type",
             "exportfileoferror": "Produce Export File of Error Rows",
-            "errorRowsExportFileName":"Error Export File Name",
+            "errorRowsExportFileName": "Error Export File Name",
             "ifanyerrors": "If Any Errors",
             "proceedwithalldata": "Proceed with Sync In of All Data",
             "proceedwithvaliddata": "Proceed with Sync In of Valid Data Only",
@@ -762,7 +944,7 @@
             "mustmapprimarykeys": "You must map all primary keys for this repository. Primary keys are: {{primarykeys}}",
             "duplicateMapping": "Duplicate column mapping : Please select single mapping.",
             "onlyxml": "Invalid file. Only the xml file generated by the export function for the import template definition are allowed.",
-            "importsuccess":"Template Imported successfully.",
+            "importsuccess": "Template Imported successfully.",
             "processing4": "Processing {{itemcount}} of {{totalitems}} records",
             "validatingImportedData": "Processing - Validating imported data",
             "importingData": "processing - Importing data"
@@ -805,6 +987,7 @@
             "selectexptype": "Select export type",
             "advanceoptions": "Use Advanced Options",
             "outputformat": "Output Format",
+            "outputformatlanguage": "Output Format Language",
             "preference": "Preference",
             "transmit": "Transmit",
             "effectivedate": "Effective Date",
@@ -867,13 +1050,13 @@
         "grouplist": "Group List",
         "prefixuser": "user:",
         "prefixgroup": "group:",
-        "ownerpropagate":"Owner Propagate",
+        "ownerpropagate": "Owner Propagate",
         "alerts": {
             "profileregsuccess": "Profiles registered successfully",
             "registerhierarchy": "Please register a hierarchy",
             "ownerpropagateconfirm": "Do you want to propagate the default owner to all code(s)?",
-            "ownerpropagatechild":"Do you want to propagate the owner to all its children?",
-            "deletesuccess":"Record Deleted Successfully"
+            "ownerpropagatechild": "Do you want to propagate the owner to all its children?",
+            "deletesuccess": "Record Deleted Successfully"
         }
     },
     "publication": {
@@ -939,9 +1122,10 @@
         "descrequired": "The description is required",
         "attributeaddedsuccess": "Attribute added Successfully.",
         "attributepresent": "Attribute already present.",
-        "navigationind":" node assignment is disabled",
-        "noallowedcodesetselected":"No detail code selected from Allowed Code Set Values",
-        "noavailablecodesetselected":"No detail code selected from Available Code Set Values",
+        "navigationind": " node assignment is disabled",
+        "noallowedcodesetselected": "No detail code selected from Allowed Code Set Values",
+        "noavailablecodesetselected": "No detail code selected from Available Code Set Values",
+        "selectsourcehierarchy": "Please select source hierarchy",
         "formField": {
             "hierarchytaxonomy": "Hierarchy / Taxonomy",
             "option": "Option",
@@ -950,7 +1134,8 @@
             "inactive": "Inactive",
             "pending": "Pending",
             "allowassignment": "Allow Assignment to Node",
-            "hiertaxonomy": "Hierarchy/Taxonomy"
+            "hiertaxonomy": "Hierarchy/Taxonomy",
+            "synchronizeWith": "Synchronize With"
         }
     },
     "profile": {
@@ -967,9 +1152,11 @@
         "editattribute": "Edit Attribute",
         "tab": "Tab",
         "reorder": "Reorder",
+        "reorderProperty": "Reorder Property",
         "manageproperty": "Manage Property",
         "propertysize": "Property Size",
         "multilanguageeditor": "Multi Language Editor",
+        "selectOwner": "Select Owner",
         "managerule": "Manage Rule",
         "severity": "Severity",
         "level": "Level",
@@ -1014,7 +1201,9 @@
         "group": {
             "collapsed": "Collapsed",
             "attributetab": "Attribute Tab",
-            "grouptype": "Group Type"
+            "grouptype": "Group Type",
+            "expanded": "Expanded",
+            "uistate": "UI State"
         },
         "option": {
             "epim": "EPIM",
@@ -1031,6 +1220,43 @@
             "hierarchycatalog": "HIERARCHY_CATALOG",
             "publishplan": "PUBLISH_PLAN",
             "codesetmetadata": "CODE_SET_METADATA"
+        },
+        "datatypes": {
+            "dataType": "Data Type",
+            "BIGINT": "BIGINT",
+            "BOOLEAN": "BOOLEAN",
+            "CURRENCY": "CURRENCY",
+            "DATE": "DATE",
+            "DECIMAL": "DECIMAL",
+            "INTEGER": "INTEGER",
+            "TIMESTAMP": "TIMESTAMP",
+            "VARCHAR": "VARCHAR"
+        },
+        "validationLevelInd": {
+            "a": "A",
+            "b": "B",
+            "c": "C",
+            "d": "D",
+            "e": "E",
+            "notValid" :"Not Validated"
+        },
+        "operators": {
+            "equals": "Equals",
+            "notEquals": "Not Equals",
+            "lessThan": "Less Than",
+            "lessThanorEquals": "Less Than or Equals",
+            "greaterThan": "Greater Than",
+            "greaterThanorEquals": "Greater Than or Equals",
+            "empty": "Empty (IS NULL)",
+            "notEmpty": "Not Empty (IS NOT NULL)",
+            "contains": "Contains (IN)",
+            "between": "Between",
+            "isTrue": "Is True",
+            "isFalse": "Is False",
+            "matches": "Matches (LIKE)",
+            "unique": "Unique",
+            "true": "True",
+            "false": "False"
         }
     },
     "managestate": {
@@ -1077,10 +1303,17 @@
         "showattrbeforelinkname": "Show Attribute Name Before Link Name",
         "showCategoryAttributes": "Show Category Attributes",
         "selectAttribute": "Select Attribute",
-        "imageInformation": "Add Image Information"
+        "imageInformation": "Add Image Information",
+        "tabulargrid": "Tabular Grid",
+        "cardview": "Card View",
+        "galleryview": "Gallery View",
+        "eg": "e.g."
     },
     "validate": {
+        "validateitemstitle": "Validate",
+        "setvalidationleveltitle": "Set Validation Level on ",
         "records": "Records",
+        "record": "Record",
         "allrecords": "All records",
         "recordtype": "Record Type",
         "recordsnotprocessed": "Records that have not yet been processed",
@@ -1092,7 +1325,21 @@
         "singlefile": "Single File",
         "validate": "Validate",
         "validationjobsuccess": "Validation Job Submitted Successfully",
-        "updatedvalidationlevel": "Updated validation level on the "
+        "validationjobSavedSeterrors": "Please choose which saved set to process.",
+        "updatedvalidationlevel": "Updated validation level on the ",
+        "skipValidation": "Skip Validation",
+        "promoteJob": "Promote Job",
+        "promotionConfiguration": "Promotion Configuration",
+        "promotionType": "Promotion Type",
+        "validRecords": "Valid Records",
+        "validOrWarningRecords": "Valid or Warning Records",
+        "validationOption": "Validation Option",
+        "allNewOrChangedRecords": "All New or Changed Records",
+        "allRecordsFromSavedSet": "All Records from Saved Set",
+        "allRecordsFromSavedSearch": "All Records from Saved Search",
+        "selectSavedSet": "Select Saved Set",
+        "selectSavedSearch": "Select Saved Search",
+        "promotedSelectedRecordsViaJob": "Selected record(s) will be promoted. A job will be submitted."
     },
     "jobmonitor": {
         "abortjob": "Abort Job",
@@ -1100,6 +1347,8 @@
         "restartjob": "Restart Job",
         "deletejob": "Delete Job",
         "jobhistory": "Job History",
+        "from": "From",
+        "to": "To",
         "transmitfile": "Transmit File",
         "logfile": "Log File",
         "outputfile": "Output File",
@@ -1124,7 +1373,79 @@
             "queued": "Queued",
             "completed": "Completed",
             "error": "Error",
-            "processing": "Processing"
+            "processing": "Processing",
+            "abort": "Abort"
+        },
+        "jobTypes": {
+            "import": "Import",
+            "sync_out": "Sync Out",
+            "validation": "Validation",
+            "migration_in": "Migration In",
+            "update_all": "Update All",
+            "delist_all": "Delist All",
+            "delete_all": "Delete All",
+            "trx_manage_all": "Trx Manage All",
+            "state_manage_all": "State Manage All",
+            "update_all_by_api": "Update All By API",
+            "migration_out": "Migration Out",
+            "export": "Export",
+            "rebuild_index": "Rebuild Index",
+            "drop_index": "Drop Index",
+            "withdraw": "Withdraw",
+            "clean_up": "Clean Up",
+            "import_category_attribute_association": "Import Category Attribute Association",
+            "snapshot": "Snapshot",
+            "migrate_epx_users_in": "Migrate Epx Users In",
+            "sync_in_sqlsvr": "Sync In Sqlsvr",
+            "export_bundle": "Export Bundle",
+            "sync_in_bundle": "Sync In Bundle",
+            "snapshot_batch": "Snapshot Batch",
+            "media_batch": "Media Batch",
+            "pending_request_export": "Pending Request Export",
+            "pending_request_import": "Pending Request Import",
+            "pending_request_run": "Pending Request Run",
+            "link_batch": "Link Batch",
+            "replace_all": "Replace All",
+            "replace_all_by_api": "Replace All By API",
+            "copytoproduction_all": "CopytoProduction All",
+            "revertfromproduction_all": "Revertfromproduction All",
+            "movetoarchive_all": "Movetoarchive All",
+            "restoretostaging_all": "Restoretostaging All",
+            "copy_data": "Copy Data",
+            "link_import": "Link Import",
+            "publication": "Publication",
+            "promote": "Promote",
+            "saved_set_import": "Saved Set Import",
+            "create_code_set_from_repository_data": "Create Code Set From Repository Data",
+            "clone": "clone",
+            "taxonomy_node_update": "Taxonomy Node Update",
+            "generate_variants": "Generate Variants",
+            "delete_orphan_images": "Delete Orphan Images",
+            "report_variants": "Report Variants",
+            "copy_hierarchy": "Copy Hierarchy",
+            "multi_lang_import": "Multi Lang Import",
+            "code_set_import": "Code Set Import",
+            "custom": "custom",
+            "image_report": "Image Report",
+			"import_object_languages":"Import Object Languages",
+			"pending_request":"Pending Request",
+			"rebuild_text_index":"Rebuild Text index",
+			"restore_to_staging":"Restore To Staging",
+			"retail_product_split/clone":"Retail Product Split/Clone",
+			"revert_from_production":"Revert From Production",
+			"validate_exchange_template":"Validate Exchange Template",
+			"transaction_manage_all":"Transaction Manage All",
+			"move_to_archive":"Move to Archive",
+			"import_stream":"Import Stream",
+			"import_sql_server":"Import SQL Server",
+			"import_category/dynamic_association":"Import Category/Dynamic Association",
+			"import_bundle":"Import Bundle",
+			"drop_text_index":"Drop Text Index",
+			"deduplication_result_import":"Deduplication Result Import",
+			"deduplication_process":"Deduplication Process",
+			"create_codeset_from_repository_data":"Create Codeset from Repository Data",
+			"copy_to_production":"Copy To Production",
+			"codeset_import":"CodeSet Import"
         }
     },
     "workflow": {
@@ -1159,7 +1480,16 @@
         "allitemspurgedsuccessmessage": "All completed items purged successfully.",
         "errorclearedsuccessfully": "Error cleared successfully.",
         "itemsendtoworkflow": "The system has started handling the request to send record(s) to the workflow. This may take a while to finish.",
-        "start": "Start"
+        "start": "Start",
+        "taskitem": "Task Item",
+        "taskstatus": "Task Status",
+        "taskrole": "Task Role",
+        "workitem": "Work Item",
+        "priority": "Priority",
+        "activity": "Activity",
+        "sender": "Sender",
+        "sentdate": "Sent Date",
+        "workitemid": "Work Item Id"
     },
     "slidemenu": {
         "enableversion": "ENABLE",
@@ -1174,11 +1504,11 @@
         "taxonomy": "Taxonomy",
         "taxonomynode": "Taxonomy Node",
         "exportstylemap": "Export Style Map",
-        "exporttemplate": "Export Template",
-        "importtemplate": "Import Template",
+        "exporttemplate": "Export Templates",
+        "importtemplate": "Import Templates",
         "publicationstylemap": "Publication Style Map",
         "publicationtemplate": "Publication Template",
-        "syndicationtemplate": "Syndication Template",
+        "syndicationtemplate": "Syndication Templates",
         "exchangetemplate": "Exchange Template",
         "userandgroups": "Users and Groups",
         "users": "Users",
@@ -1239,8 +1569,17 @@
         "state": "State",
         "internalattribute": "Internal Attribute",
         "taxonomy": "Taxonomy",
-        "novalue":"No Value",
-        "enter2charactersforkeywordsearch":"Please enter at least 2 characters for keyword search!"
+        "novalue": "No Value",
+        "enter2charactersforkeywordsearch": "Please enter at least 2 characters for keyword search!",
+        "root": "Root",
+        "haserror": "Has Error",
+        "valid": "Valid",
+        "inproduction": "In Production",
+        "notinproduction": "Not In Production",
+        "error": "Error",
+        "isnotempty": "Is Not Empty",
+        "isempty": "Is Empty",
+        "typeandenter" : "Type and Enter.."
     },
     "preferencemanagerfilter": {
         "editpreference": "Edit Preference",
@@ -1251,6 +1590,28 @@
         "savednopreference": "Saved No Preference",
         "ascending": "ASCENDING",
         "descending": "DESCENDING"
+    },
+    "dateTimePickerLabels" : {
+        "upSecondLabel": "Add a second",
+        "downSecondLabel": "Minus a second",
+        "upMinuteLabel": "Add a minute",
+        "downMinuteLabel": "Minus a minute",
+        "upHourLabel": "Add a hour",
+        "downHourLabel": "Minus a hour",
+        "prevMonthLabel": "Previous month",
+        "nextMonthLabel": "Next month",
+        "prevYearLabel": "Previous year",
+        "nextYearLabel": "Next year",
+        "prevMultiYearLabel": "Previous 21 years",
+        "nextMultiYearLabel": "Next 21 years",
+        "switchToMonthViewLabel": "Change to month view",
+        "switchToMultiYearViewLabel": "Choose month and year",
+        "cancelBtnLabel": "Cancel",
+        "setBtnLabel": "Set",
+        "rangeFromLabel": "From",
+        "rangeToLabel": "To",
+        "hour12AMLabel": "AM",
+        "hour12PMLabel": "PM"
     },
     "recordlisting": {
         "deselect": "Deselect",
@@ -1293,6 +1654,7 @@
         "tempsavedsetmultiedit": "TempSavedSetMultiEdit",
         "tempsavedsetmultieditdesc": "temp Saved Set for multi edit",
         "lockedinworkflow": "Locked in Workflow",
+        "preview": "Preview",
         "itemid": "Item Id",
         "state": "State",
         "deduplicationruleslower": "Deduplication Rules",
@@ -1301,7 +1663,16 @@
         "selectedrecords": "Selected Records",
         "allrecords": "All Records",
         "booleanfilterwarning": "Boolean data is stored as 0/1",
-        "promoteMessage": "The selected valid record(s) will be promoted in a newly created promote job."
+        "promoteMessage": "The selected valid record(s) will be promoted in a newly created promote job.",
+        "wantToRollbackSelectedRecord": "Do you want to roll back selected record ?",
+        "wantToExportAllItemsFromSelectedHierarchy": "Do you want to export all items from the selected Hierarchy ?",
+        "wantToExportAllItemsFromSelectedSavedSet": "Do you want to export all items from the selected Saved Set ?",
+        "wantToPromoteSavedSetDefToProd": "Do you want to promote the saved set definition to production? Only the saved set definition will be promoted. To promote the records in the saved set use the Promote records menu option.",
+        "wantToCloneSelectedRecords": "Do you want to clone selected record(s) ?",
+        "wantToRemoveRecordFromCurrentNode": "Do you want to remove the record from the current node?",
+        "wantToAddItemsToSavedSet": "Do you want to add {{itemcount}} item(s) {{itemname}}?",
+        "in": "in",
+        "overallerrordetails" : "Overall Error Details"
     },
     "admingroups": {
         "availableusers": "Available Users",
@@ -1314,7 +1685,9 @@
         "required": "Login, Password, First Name, Last Name are required.",
         "cantbeginorendwithspaces": "Password can't begin or end with spaces",
         "requiredfield": "Required field",
-        "newpasswordsdontmatch": "New passwords do not match"
+        "newpasswordsdontmatch": "New passwords do not match",
+        "newpassword": "New Password",
+        "confirmnewpassword": "Confirm New Password"
     },
     "inlineeditor": {
         "openintab": "Open In Tab",
@@ -1369,7 +1742,7 @@
         "selectdate": "Select Date",
         "errorselectitemtoremovefromlink": "You do not have permission to edit linked repository",
         "erroritemsdeletedsuccessfully": "You do not have permission to delete this record",
-        "errorLinkeditemReorder":"The linked items can not be reordered because the sequence attribute is not defined for the link relation"
+        "errorLinkeditemReorder": "The linked items can not be reordered because the sequence attribute is not defined for the link relation"
     },
     "login": {
         "therightcontentenabled": "The Right Content. Enabled.",
@@ -1383,18 +1756,19 @@
         "authorizingwithserver": "Authorizing with server...",
         "loginfailurepleasetryagain": "Login Failure, Please try again!",
         "moreinformation": "FOR MORE INFORMATION ABOUT PRODUCT GO TO <a href='https://www.enterworks.com/' target='_blank' class='text-link-blue'>WWW.ENTERWORKS.COM</a>",
-        "ldap.facade.error.code.49.525" : "LDAP_NO_SUCH_OBJECT : Entry does not exist.",
-        "ldap.facade.error.code.49.52f" : "ERROR_ACCOUNT_RESTRICTION: Account Restrictions are preventing this user from signing in.",
-        "ldap.facade.error.code.49.530" : "ERROR_INVALID_LOGON_HOURS: Time Restriction:Entry logon time restriction violation",
-        "ldap.facade.error.code.49.531" : "ERROR_INVALID_WORKSTATION: Device Restriction:Entry not allowed to log on to this computer.",
-        "ldap.facade.error.code.49.532" : "ERROR_PASSWORD_EXPIRED: Password Expiration: Your password has expired, please request a new password.",
-        "ldap.facade.error.code.49.533" : "ERROR_ACCOUNT_DISABLED: Administratively Disabled: LDAP User-Account-Control Attribute - ACCOUNTDISABLE",
-        "ldap.facade.error.code.49.568" : "ERROR_TOO_MANY_CONTEXT_IDS: During a logon attempt, the user's security context accumulated too many security Identifiers. (ie Group-AD)",
-        "ldap.facade.error.code.49.701" : "ERROR_ACCOUNT_EXPIRED: LDAP Password Expiration: User-Account-Control Attribute - ACCOUNTEXPIRED",
-        "ldap.facade.error.code.49.773" : "ERROR_PASSWORD_MUST_CHANGE: Password Expiration: Entry's password must be changed before logging on LDAP pwdLastSet: value of 0 indicates admin-required password change - MUST_CHANGE_PASSWD",
-        "ldap.facade.error.code.49.775" : "ERROR_ACCOUNT_LOCKED_OUT: Intruder Detection:Entry is currently locked out and may not be logged on to LDAP User-Account-Control Attribute - LOCKOUT",
+        "cookieconsentbanner": "We use cookies to offer you a better experience, analyze site traffic, and serve targeted advertisements. By clicking &lsquo;Accept & Continue&rsquo;, you consent to the use of cookies in accordance with our Cookie Policy.",
+        "cookieacceptbtn": "Accept & Continue",
+        "ldap.facade.error.code.49.525": "LDAP_NO_SUCH_OBJECT : Entry does not exist.",
+        "ldap.facade.error.code.49.52f": "ERROR_ACCOUNT_RESTRICTION: Account Restrictions are preventing this user from signing in.",
+        "ldap.facade.error.code.49.530": "ERROR_INVALID_LOGON_HOURS: Time Restriction:Entry logon time restriction violation",
+        "ldap.facade.error.code.49.531": "ERROR_INVALID_WORKSTATION: Device Restriction:Entry not allowed to log on to this computer.",
+        "ldap.facade.error.code.49.532": "ERROR_PASSWORD_EXPIRED: Password Expiration: Your password has expired, please request a new password.",
+        "ldap.facade.error.code.49.533": "ERROR_ACCOUNT_DISABLED: Administratively Disabled: LDAP User-Account-Control Attribute - ACCOUNTDISABLE",
+        "ldap.facade.error.code.49.568": "ERROR_TOO_MANY_CONTEXT_IDS: During a logon attempt, the user's security context accumulated too many security Identifiers. (ie Group-AD)",
+        "ldap.facade.error.code.49.701": "ERROR_ACCOUNT_EXPIRED: LDAP Password Expiration: User-Account-Control Attribute - ACCOUNTEXPIRED",
+        "ldap.facade.error.code.49.773": "ERROR_PASSWORD_MUST_CHANGE: Password Expiration: Entry's password must be changed before logging on LDAP pwdLastSet: value of 0 indicates admin-required password change - MUST_CHANGE_PASSWD",
+        "ldap.facade.error.code.49.775": "ERROR_ACCOUNT_LOCKED_OUT: Intruder Detection:Entry is currently locked out and may not be logged on to LDAP User-Account-Control Attribute - LOCKOUT",
         "ldap.facade.error.code.49.80090346": "ERROR_ACCOUNT_LOCKED_OUT: AcceptSecurityContext error"
-
     },
     "itemeditor": {
         "recordeditor": "Detail Editor Tab",
@@ -1408,6 +1782,7 @@
         "new": "New",
         "change": "Change",
         "severe": "Severe",
+        "delist": "Delist",
         "unlocked": "Unlocked",
         "locked": "Locked",
         "rollbackrecord": "Rollback 1 record",
@@ -1451,7 +1826,8 @@
             "status": "Status",
             "downloadtype": "Download Type",
             "compfilename": "Compressed File Name",
-            "zipfilename": "Compressed with zip"
+            "zipfilename": "Compressed with zip",
+            "zoom": "Zoom"
         },
         "tooltip": {
             "overwrite": "Overwrite",
@@ -1510,7 +1886,12 @@
             "year": "Year",
             "start": "Start",
             "end": "End",
-            "interval": "Interval"
+            "interval": "Interval",
+            "status": "Status",
+            "lastmodifiedinterval": "Last Modified Interval",
+            "intervalreportgraphtype": "Interval Report-Graph Type",
+            "statusreportgraphtype": "Status Report-Graph Type",
+            "label" : "Label"
         },
         "repositoryview": {
             "coverflow": "Cover-flow only",
@@ -1529,7 +1910,8 @@
             "nooflinks": "Number of Links",
             "graphtype": "Graph Type",
             "graphlegendposition": "Graph Legend Position",
-            "linkcount": "Link Count"
+            "linkcount": "Link Count",
+            "links" : "Links"
         },
         "imagereport": {
             "fields": {
@@ -1563,7 +1945,8 @@
                 "attributetoreport": "Attribute to Report",
                 "attributetocount": "Attribute to Count",
                 "numofreports": "# to Reports",
-                "maxofreprots": "Max Values to Report"
+                "maxofreprots": "Max Values to Report",
+                "greaterthenzero": "has to be greater than 0"
             }
         }
     },
@@ -1660,7 +2043,12 @@
         "eventname": "Event Name",
         "eventdescription": "Event Description",
         "effectivedate": "Effective Date",
-        "expirationdate": "Expiration Date"
+        "expirationdate": "Expiration Date",
+        "eventSelectionMessage": "Do you want to add selected item to",
+        "event": "event?",
+        "invalidEffectiveDate": "Invalid Effective Date.",
+        "invalidExpirationDate": "Invalid Expiration Date.",
+        "deleteEventMessage": "Do you want to delete event?"
     },
     "profilegrouplist": {
         "alerts": {
@@ -1704,11 +2092,16 @@
     "exporttemplate": {
         "security": "Security",
         "deleteexport": "Delete Export Template",
+        "deleteSyndication": "Delete Syndication Template",
         "deletetemplateconfirm": "Are you sure you want to delete selected template(s) ?",
         "errorwhiledeleting": "Error while deleting",
         "onlyXls": "Only xls file can be uploaded.",
-        "importExportTemplate" : "Export Template - Import",
+        "importExportTemplate": "Export Template - Import",
+        "syndicationImportTemplate": "Syndication Template - Import",
+        "importSyndicationTemplate": "Syndication Template Import Editor",
+        "importNamesSyndicationTemplate": "Syndication Template Import Names",
         "moveFolder": "Template was moved succesfully.",
+        "syndicationTemplate": "Syndication Template",
         "types": {
             "indesigncsv": "InDesign CSV",
             "xml": "XML",
@@ -1720,7 +2113,8 @@
             "customxml": "Custom XML",
             "preview": "PREVIEW",
             "json": "JSON",
-            "xmlexchange": "XML Exchange"
+            "xmlexchange": "XML Exchange",
+            "customXMLType": "Custom XML Type"
         },
         "templates": {
             "export": "Export Templates",
@@ -1744,23 +2138,25 @@
             "deleteselectedmappings": "Are you sure you want to delete selected mapping(s) ?",
             "mapping": "Mapping",
             "orderchangesuccess": "Order changed successfully",
-            "foundattrname" : "Found Attribute Name",
-            "fillinvalues" : "Fill In Values For the Attributes:",
-            "previewrdata" : "Preview",
-            "renderedtext" : "Rendered Text:",
+            "foundattrname": "Found Attribute Name",
+            "fillinvalues": "Fill In Values For the Attributes:",
+            "previewrdata": "Preview",
+            "renderedtext": "Rendered Text:",
             "builder": "Builder",
             "catalognode": "Catalog Node",
             "alertOnSwitchingNode": "You are moving away from current editing mappings, Do you want to save your changes?",
             "deleteMappingConfirm": "Do you want to delete the mapping data for current node?",
-            "mappingDeleteSuccess" : "Mappings on this node had been deleted!",
+            "mappingDeleteSuccess": "Mappings on this node had been deleted!",
             "noExistingMapping": "No Detail Mappings defined for",
             "copyMappings": "Mappings are copied.",
             "pasteMappings": "Mappings are pasted.",
-            "iconPriority" : "Icon Priority"
+            "iconPriority": "Icon Priority"
         },
         "manage": {
             "groupname": "Group Name",
+            "description": "description",
             "outputtype": "Output Type",
+            "state": "State",
             "rootrepository": "Root Repository",
             "outputfilealias": "Output File Alias Format Type",
             "iconrepository": "Icon Repository",
@@ -1803,16 +2199,122 @@
             "existingColumnAliasesResetContinue": "All existing column aliases will be reset, do you want to continue?",
             "details": "Details",
             "nopermission": "You do not have permission.",
-            "emptyState": "Please select a repository to select attributes for the template"
-
+            "emptyState": "Please select a repository to select attributes for the template",
+            "alias": "Alias",
+            "categroyAttr": "Category Attributes",
+            "includeAllCategeoryAttr": "Include All Category Attributes",
+            "includeSomeCategeoryAttr": "Include Some Category Attributes",
+            "emptyAlias": "Empty Alias Name.",
+            "specifyNumberofCatAttrInc": "Specify the number of Category Attributes to include."
         },
-        "templateMenu" : {
-            "export" : "Export",
+        "templateMenu": {
+            "export": "Export",
             "exchange": "Exchange",
             "publication": "Publication",
             "syndication": "Syndication"
         },
         "exportSuccess": "The template has been exported."
+    },
+    "repository": {
+        "manage": {
+            "details": "Details",
+            "showAll": "Show All",
+            "hideAll": "Hide All",
+            "name": "Name",
+            "description": "Description",
+            "profile": "Profile",
+            "preStagingStagingProduction": "PreStaging/Staging/Production",
+            "select": "Select",
+            "preStagingRepository": "Pre Staging Repository",
+            "stagingRepository": "Staging Repository",
+            "productionRepository": "Production Repository",
+            "repositoryType": "Repository Type",
+            "repositoryFolder": "Repository Folder",
+            "showTab": "Show Tab",
+            "tabName": "Tab Name",
+            "autoGenerateSequence": "Auto Generate Sequence",
+            "sequence": "Sequence",
+            "b": "b",
+            "deriveIndicatorDigit": "Derive Indicator Digit",
+            "transmissionOption": "Transmission Option",
+            "DEFAULT": "DEFAULT",
+            "demandwareStaging": "Demandware Staging",
+            "GDSNAS2": "GDSN AS2",
+            "JDBC": "JDBC",
+            "onDemandDWREUpdate": "On Demand DWRE Update",
+            "sampleTransmission": "SampleTransmission",
+            "stevenTransmissionTest": "steven transmission test",
+            "transmissionDefault": "TransmissionDefault",
+            "uniProOneAddressExport": "UniPro One Address Export",
+            "uniProOneBranchExport": "UniPro One Branch Export",
+            "uniProOneCampaignExport": "UniPro One Campaign Export",
+            "uniProOneCompanyExport": "UniPro One Company Export",
+            "vTransmissionOption": "v transmission option",
+            "defaultMapping": "Default Mapping",
+            "validationLevelPostAction": "Validation Level Post Action",
+            "useSecurityContext": "Use Security Context",
+            "cloneAction": "Clone Action",
+            "snapshotLanguageSupport": "Snapshot Language Support",
+            "validateItemsafterMultiEdit": "Validate Items after Multi-Edit",
+            "linkstoDAMobjects": "Links to DAM objects",
+            "trackRecordChanges": "Track Record Changes",
+            "createCategoryAttributeSnapshot": "Create Category Attribute Snapshot",
+            "automaticallyPublishReadyRecords": "Automatically Publish Ready Records",
+            "autoPublishIntervalinHours": "Auto Publish Interval (in hours)",
+            "autoPublishStart": "Auto Publish Start",
+            "now": "Now",
+            "specificDate": "Specific Date",
+            "automaticallySyncInRecords": "Automatically Sync in Records",
+            "autoSyncInIntervalInHours": "Auto Sync in Interval (in hours)",
+            "autoSyncInStart": "Auto Sync in Start",
+            "attributeProperties": "Attribute Properties",
+            "attribute": "Attribute",
+            "type": "Type",
+            "relational": "Relational",
+            "createIndex": "Create Index",
+            "drillDownIndex": "Drill Down Index",
+            "defaultValue": "Default Value",
+            "defaultOverrideInd": "Default Override Ind",
+            "calculationInd": "Calculation Ind",
+            "calculationLabel": "Calculation Label",
+            "calculationUrl": "Calculation Url",
+            "yes": "Yes",
+            "no": "No",
+            "openAsDialog": "Open as Dialog",
+            "noUserInterface": "No User Interface",
+            "openAsWindow": "Open as Window",
+            "hiddenWindow": "Hidden Window",
+            "controlWithWindow": "Control with Window",
+            "controlWithHiddenWindow": "Control with Hidden Window",
+            "calculatedAttribute": "Calculated Attribute",
+            "ruleProperties": "Rule Properties",
+            "securityFilters": {
+                "searchAnyConditions": "Search Any Conditions (OR)",
+                "searchAllConditions": "Search All Conditions (AND)",
+                "attribute": "Attribute",
+                "order": "Order",
+                "searchType": "Search Type",
+                "searchValue": "Search Value",
+                "category": "Category",
+                "contains": "Contains",
+                "exactMatch": "Exact Match",
+                "lookup": "Lookup",
+                "attributes": "Attributes",
+                "search": "Search"
+            }
+        }
+    },
+    "validation": {
+        "job": {
+            "level": {
+                "a": "",
+                "b": "",
+                "c": "",
+                "d": "",
+                "e": "",
+                "notValid": "nvalid-en"
+            }
+        }
     },
     "navbar": {
         "channels": "Channels",
@@ -1835,7 +2337,9 @@
             "validationRules": "Validation Rules",
             "sequenceNumber": "Sequence Number",
             "newChannel": "Add",
-            "deleteChannel": "Delete"
+            "deleteChannel": "Delete",
+            "passedValidations": "Passed Validations",
+            "failedValidations": "Failed Validations"
         }
     },
     "graph": {
@@ -1864,7 +2368,8 @@
             "categories": "Categories: ",
             "updateStatistics": "Update Statistics",
             "transmit": "Transmit",
-            "inbound": "Inbound: "
+            "inbound": "Inbound: ",
+            "cancel": "Cancel"
         }
     },
     "attributes": {
@@ -1876,7 +2381,12 @@
             "categoryGlobal": "Category: Global",
             "global": "Global",
             "records": "Records",
-            "attributes": "Attributes"
+            "attributes": "Attributes",
+            "legend": "Legend",
+            "linkRelation": "Link Relation",
+            "variant": "Variant",
+            "move": "Move",
+            "addTabGroup": "Add Tab / Group"
         },
         "type": {
             "type": "Type",
@@ -1979,7 +2489,7 @@
         "attributemapping": "Attribute Mapping",
         "targetreporelationships": "Target Repository Relationships",
         "importtemplateimport": "Import Template - Import",
-		"filezerosize": "The selected file seems to be empty.",
+        "filezerosize": "The selected file seems to be empty.",
         "fileuploadsize": "The file upload size limit is set to 1000 MB",
         "importtemplatename": "Import Template Name",
         "importtemplatedesc": "Import Template Description",
@@ -1997,7 +2507,8 @@
             "maptomultiplesourcerepoattr": "is mapped to multiple source repository attributes",
             "namealreadyexists": "Import template name already exists",
             "nokeyattrmaptotargetrepo": "No key attribute mapped for the target repository",
-            "exportsuccess":"template exported successfully.",
+            "nokeyattrmaptotargetrepoName": "No key attribute from following repository mapped for the target repository: {{repositoryName}}",
+            "exportsuccess": "template exported successfully.",
             "duplicatemapping": "The import file is invalid because the following column name has duplicate: {{attributeNames}}",
             "noheaderstomap": "The file contains no column to map.",
             "unmappedattributes": "All columns must be mapped to an attribute.",
@@ -2125,11 +2636,6 @@
             "searchTypeCode": 26,
             "svgIcon": "opr-ends-with"
         },
-        "810": {
-            "label": "Invalid Code",
-            "searchTypeCode": -810,
-            "svgIcon": "opr-invalid-code"
-        },
         "700": {
             "label": "Linked",
             "searchTypeCode": -700,
@@ -2154,6 +2660,299 @@
             "label": "Choose Owner",
             "searchTypeCode": -802,
             "svgIcon": "opr-choose-owner"
+        },
+        "810": {
+            "label": "Invalid Code",
+            "searchTypeCode": -810,
+            "svgIcon": "opr-invalid-code"
+        }
+    },
+    "auditHistory": {
+        "actionFilters": {
+            "create": "create",
+            "update": "update",
+            "delete": "delete",
+            "status change": "status change",
+            "current": "current"
+        }
+    },
+    "SAPIntegration": {
+        "ModalTitle": "SAP Posting",
+        "ERPTemplate": "ERP Template",
+        "SendToSAP": "Send to SAP"
+    },
+    "fitment": {
+        "tooltip": {
+            "quantitySelected": "Quantity = {{totalQuantity}}  from {{selectedCount}} out of {{itemCount}} items",
+            "clickToExpand": "Click to Expand",
+            "clickToCollapse": "Click to Collapse"
+        }
+    },
+    "stateAttributeData": {
+        "-141": {
+            "0": "No Error",
+            "1": "Warning",
+            "2": "Not validated",
+            "3": "Severe",
+            "4": "Valid Not in Production"
+        },
+        "-142": {
+            "0": "No Error",
+            "1": "Warning",
+            "2": "Not validated",
+            "3": "Severe",
+            "4": "Valid Not in Production"
+        },
+        "-143": {
+            "0": "No Error",
+            "1": "Warning",
+            "2": "Not validated",
+            "3": "Severe",
+            "4": "Valid Not in Production"
+        },
+        "-144": {
+            "0": "No Error",
+            "1": "Warning",
+            "2": "Not validated",
+            "3": "Severe",
+            "4": "Valid Not in Production"
+        },
+        "-145": {
+            "0": "No Error",
+            "1": "Warning",
+            "2": "Not validated",
+            "3": "Severe",
+            "4": "Valid Not in Production"
+        },
+        "-117": {
+            "0": "No Error",
+            "1": "Warning",
+            "2": "Not validated",
+            "3": "Severe",
+            "4": "Valid Not in Production"
+        },
+        "-100": {
+            "0": "No Error",
+            "1": "Warning",
+            "2": "Not validated",
+            "3": "Severe",
+            "4": "Valid Not in Production"
+        },
+        "-101": {
+            "0": "No",
+            "1": "Yes"
+        },
+        "-111": {
+            "0": "Sync",
+            "1": "New",
+            "2": "Change",
+            "3": "Severe"
+        },
+        "-113": {
+            "0": "Unlocked",
+            "1": "Locked"
+        },
+        "-119": {
+            "0": "isFalse",
+            "1": "isTrue"
+        }
+    },
+    "capabilities": {
+        "featurebar": "Feature Bar",
+        "dashboard": {
+            "dashboard": "Dashboard",
+            "savelayout": "Save Layout",
+            "addwidget": "Add Widget",
+            "profileselection": "Profile Selection",
+            "widgetdelete": "Widget Delete",
+            "widgetrefresh": "Widget Refresh",
+            "widgetconfigure": "WIdget Configure"
+        },
+        "repository": {
+            "repository": "Repository",
+            "preference": {
+                "preference": "Preference",
+                "create": "Create",
+                "edit": "Edit",
+                "delete": "Delete",
+                "resize": "Resize",
+                "show": "Show"
+            },
+            "toolbar": {
+                "toolbar": "Toolbar",
+                "selectall": "Select All",
+                "create": "Create",
+                "edit": "Edit",
+                "delete": "Delete",
+                "compare": "Compare",
+                "hierarchy": "Hierarchy",
+                "savedset": "Saved Set",
+                "toolbaroptions": {
+                    "toolbaroptions": "Toolbar Options",
+                    "savedsearch": "Saved Search",
+                    "filter": "Filter",
+                    "import": "Import",
+                    "export": "Export",
+                    "validate": "Validate",
+                    "setvalidationlevel": "Set Validation Level",
+                    "managestate": "Manage State",
+                    "history": "History",
+                    "rollback": "Rollback",
+                    "sendtoworkflow": "Send to Workflow",
+                    "sendtoevents": "Send to Events",
+                    "copy": "Copy",
+                    "generateimportexporttemplate": "Generate Import Export Template"
+                },
+                "imagescoverflow": "Images Cover Flow",
+                "inlineeditor": "Inline Editor",
+                "promoterecord": "Promote Record"
+            },
+            "panel": {
+                "panel": "Panel",
+                "hierarchytaxonomy": {
+                    "hierarchytaxonomy": "Hierarchy  Taxonomy",
+                    "manage": {
+                        "manage": "Manage",
+                        "addattribute": "Add Attribute"
+                    },
+                    "addhierarchy": "Add Hierarchy",
+                    "deletehierarchy": "Delete Hierarchy",
+                    "nodeoptions": "Node Options"
+                },
+                "savedset": {
+                    "savedset": "Saved Set",
+                    "create": "Create",
+                    "edit": "Edit",
+                    "delete": "Delete",
+                    "refresh": "Refresh",
+                    "removeitems": "Remove Items",
+                    "ownerview": "Owner View",
+                    "assignrecords": "Assign Records"
+                },
+                "savedsearch": {
+                    "savedsearch": "Saved Search",
+                    "create": "Create",
+                    "edit": "Edit",
+                    "delete": "Delete",
+                    "save": "Save",
+                    "refresh": "Refresh",
+                    "opensavedsearcheditor": "Open Saved Search Editor"
+                },
+                "filter": {
+                    "filter": "Filter",
+                    "refresh": "Refresh"
+                },
+                "namedevents": {
+                    "namedevents": "Named Events",
+                    "create": "Create",
+                    "edit": "Edit",
+                    "delete": "Delete",
+                    "refresh": "Refresh",
+                    "removeitems": "Remove Items",
+                    "edititems": "Edit Items"
+                }
+            },
+            "recordeditor": {
+                "recordeditor": "Record Editor",
+                "rollback": "Rollback",
+                "editall": "Edit All"
+            }
+        },
+        "administration": {
+            "administration": "Administration",
+            "channelreadiness": {
+                "channelreadiness": "Channel Readiness",
+                "inbound": {
+                    "inbound": "Inbound",
+                    "attributes": "Attributes",
+                    "graph": "Graph",
+                    "add": "Add",
+                    "edit": "Edit",
+                    "delete": "Delete"
+                },
+                "outbound": {
+                    "outbound": "Outbound",
+                    "attributes": "Attributes",
+                    "graph": "Graph",
+                    "add": "Add",
+                    "edit": "Edit",
+                    "delete": "Delete"
+                }
+            },
+            "publicationmanager": {
+                "publicationmanager": "Publication Manager",
+                "category": {
+                    "category": "Category",
+                    "add": "Add",
+                    "edit": "Edit",
+                    "delete": "Delete"
+                },
+                "publication": {
+                    "publication": "Publication",
+                    "add": "Add",
+                    "delete": "Delete"
+                }
+            },
+            "codeset": "Code Set",
+            "folders": {
+                "folders": "Folders",
+                "codeset": "Code Set",
+                "exportstylemap": "Export Style Map",
+                "exporttemplate": "Export Template",
+                "exchangetemplate": "Exchange Template",
+                "hierarchy": "Hierarchy",
+                "publicationstylemap": "Publication Style Map",
+                "publicationtemplate": "Publication Template",
+                "repository": "Repository",
+                "syndicationtemplate": "Syndication Template",
+                "taxonomy": "Taxonomy"
+            },
+            "model": {
+                "model": "Model",
+                "profiles": "Profiles",
+                "repositories": "Repositories",
+                "hierarchies": "Hierarchies",
+                "taxonomy": "Taxonomy",
+                "codesets": "Code sets"
+            },
+            "import&export": {
+                "import&export": "Import & Export",
+                "import": "Import",
+                "export": "Export"
+            },
+            "users&groups": {
+                "users&groups": "Users & Groups",
+                "users": "Users",
+                "groups": "Groups",
+                "usersettings": "User Settings"
+            },
+            "workflowtaskmanager": {
+                "workflowtaskmanager": "Workflow Task Manager",
+                "useractivewi": "User Active WI",
+                "allactivewi": "All Active WI",
+                "completedactivewi": "Completed Active WI"
+            },
+            "migration": {
+                "migration": "Migration",
+                "in": "In",
+                "out": "Out",
+                "users": "Users"
+            }
+        },
+        "reports": {
+            "reports": "Reports",
+            "filterreport": "Filter Report",
+            "linkedcontentreport": "Linked Content Report",
+            "repositorystatusreport": "Repository Status Report",
+            "dataqualitymanufacturerview": "Data Quality Manufacturer View",
+            "dataqualitydistributorview": "Data Quality Distributor View"
+        },
+        "system": {
+            "system": "System",
+            "clearcache": "Clear Cache",
+            "expertmode": "Expert Mode",
+            "jobmonitor": "Job Monitor",
+            "helprestapi": "Help Rest API"
         }
     }
 }

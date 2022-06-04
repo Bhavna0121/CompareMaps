@@ -59,7 +59,7 @@ public class App {
 				leftMap.put(key, "");
 			}
 		}
-
+		
 		int expected = passMap.size() + failMap.size() + leftMap.size();
 		int actual = myfilenames.size();
 		int tmpo = containsTmportal.size();
@@ -68,8 +68,9 @@ public class App {
 			System.out.println("All good ");
 		} else if (tmpo == actual) {
 			System.out.println("All good ");
-		} else
+		} else {
 			System.out.println("Issue with this code");
+		}
 
 		System.out.println("\n TMPortal Map ");
 		int count = 0;
@@ -100,8 +101,7 @@ public class App {
 		for (String k : leftMap.keySet()) {
 			count++;
 			String key = k.toString();
-			String value = leftMap.get(k);
-			System.out.println(count + " : " + key + " = " + value);
+			System.out.println(count + " : " + key);
 		}
 		/*
 		 * Set<String> s = new HashSet<String>(metricsMap.keySet());
