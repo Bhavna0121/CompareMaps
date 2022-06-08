@@ -1,15 +1,15 @@
 package comparefile.MetricsStatusCompareWithLocal;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.List;
+import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.Map.Entry;
 
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -20,13 +20,11 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-public class JSONFileKEyValue {
+public class FetchKeyValue {
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public static void main(String[] args) throws IOException, ParserConfigurationException, SAXException {
 
-		String testdata = "Feature Bar;Repository#Toolbar#Toolbar Options#Saved Search;Repository#Panel#Saved Search#Edit;Repository#Panel#Saved Search#Delete;Repository#Panel#Saved Search#Refresh";
-		String duplicatetestdata = "Feature Bar;Repository#Toolbar#Toolbar Options#Saved Search;Repository#Panel#Saved Search#Edit;Repository#Panel#Saved Search#Delete;Repository#Panel#Saved Search#Refresh";
-		Map<String, Object> globalMap = new HashMap<>();
+		Map<String, Object> globalMap = new LinkedHashMap();
 		// read json file
 		// and put it in format like . and . and . like this
 		// kept as per the testdata name = key towards value as that word
@@ -155,38 +153,15 @@ public class JSONFileKEyValue {
 					globalMap.put(key, jsonObject.get(key));
 				}
 			}
-			// }
-			/*
-			 * BufferedWriter writer = new BufferedWriter(new FileWriter("12english.txt",
-			 * true)); for (String k : globalMap.keySet()) { Object value =
-			 * globalMap.get(k); writer.append(k + " = " + value + "\n"); } writer.close();
-			 */
-
-			List<String> items = Arrays.asList(testdata.split(";"));
-			for (int i = 0; i < items.size(); i++) {
-				if (items.get(i).contains("#")) {
-					String[] it = items.get(i).split("#");
-					for (int k = 0; k < it.length; k++) {
-						for (Entry<String, Object> entry : globalMap.entrySet()) {
-							if (entry.getValue().equals(it[k])) {
-								duplicatetestdata = duplicatetestdata.replace(it[k], entry.getKey());
-								break;
-							}
-						}
-					}
-					// check here if matches
-				} else {
-					// check here
-					for (Entry<String, Object> entry : globalMap.entrySet()) {
-						if (entry.getValue().equals(items.get(i))) {
-							duplicatetestdata = duplicatetestdata.replace(items.get(i), entry.getKey());
-							break;
-						}
-					}
-				}
-			}
-			System.out.println(duplicatetestdata);
 		}
+
+		BufferedWriter writer = new BufferedWriter(new FileWriter("keyvalueEnglish.txt", true));
+		for (String k : globalMap.keySet()) {
+			Object value = globalMap.get(k);
+			writer.append(k + " = " + value + "\n");
+		}
+		writer.close();
+
 	}
 
 	public static Map getElementKeyValue(NodeList nodeList) {
